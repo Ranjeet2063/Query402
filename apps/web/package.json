@@ -6,8 +6,8 @@
   "scripts": {
     "prebuild": "npm --prefix ../../packages/shared run build",
     "pretypecheck": "npm --prefix ../../packages/shared run build",
-    "dev": "vite",
-    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "dev": "node init && vite",
+    "build": "node init && tsc -p tsconfig.json --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "node --import tsx --test src/components/PaymentEvidenceBanner.test.ts src/lib/wallet/machine.test.ts src/lib/idempotency.test.ts src/lib/api.test.ts src/lib/x402.test.ts src/lib/sponsorship.test.ts src/pages/LandingPage.test.ts",
@@ -36,7 +36,7 @@
     "postcss": "^8.5.31",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
-    "vite": "^5.4.19"
+    "vite": "^8.3.5"
   },
   "optionalDependencies": {
     "@esbuild/linux-x64": "^0.28.2",
